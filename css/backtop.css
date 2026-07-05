@@ -1,0 +1,44 @@
+#backTop{
+    position:fixed;
+    left:30px;
+    bottom:30px;
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:var(--primary);
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    opacity:0;
+    visibility:hidden;
+    transition:.4s;
+}
+
+#backTop.show{
+    opacity:1;
+    visibility:visible;
+}
+
+#backTop {
+    position: fixed;
+    left: 20px; /* Um pouco mais próximo da borda */
+    bottom: 20px;
+    width: 50px; /* Tamanho levemente reduzido */
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+    z-index: 999; /* Garante que fique acima de tudo */
+}
+
+#backTop.show {
+    opacity: 1;
+    visibility: visible;
+}

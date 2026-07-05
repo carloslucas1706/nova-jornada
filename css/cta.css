@@ -1,0 +1,81 @@
+.cta{
+    padding:90px 0;
+    background:linear-gradient(135deg,var(--primary),#0f67b8);
+    text-align:center;
+    color:white;
+}
+
+.cta h2{
+    font-size:48px;
+    margin-bottom:25px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:45px;
+    opacity:.9;
+}
+
+.cta-button{
+    display:inline-flex;
+    align-items:center;
+    gap:15px;
+    background:var(--secondary);
+    color:white;
+    text-decoration:none;
+    padding:20px 40px;
+    border-radius:60px;
+    font-size:20px;
+    font-weight:700;
+    transition:.35s;
+}
+
+.cta-button:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+.cta {
+    padding: 60px 20px; /* Menos padding no mobile */
+    background: linear-gradient(135deg, var(--primary), #0f67b8);
+    text-align: center;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 32px; /* Fonte menor no mobile */
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+.faq {
+    padding: 60px 20px;
+    background: #f8fbfd;
+}
+
+.faq h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.faq-question {
+    padding: 20px;
+    font-size: 18px; /* Ajuste para leitura mobile */
+}
+
+/* Garante que o texto da resposta não fique apertado */
+.faq-answer {
+    padding: 0 20px;
+}

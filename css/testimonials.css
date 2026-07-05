@@ -1,0 +1,208 @@
+.testimonial-slider{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:30px;
+margin-top:50px;
+}
+
+.testimonial-card{
+background:#fff;
+padding:50px;
+border-radius:30px;
+display:flex;
+align-items:center;
+gap:40px;
+max-width:900px;
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+}
+
+.testimonial-avatar{
+
+width:120px;
+height:120px;
+border-radius:50%;
+background:#f4f7fb;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:60px;
+color:#9aa3af;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.stars{
+font-size:30px;
+color:#FDBA12;
+margin-bottom:20px;
+}
+
+.testimonial-content * {
+    transition: all 0.3s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.testimonial-content p{
+font-size:28px;
+font-style:italic;
+line-height:1.6;
+margin-bottom:25px;
+}
+
+.testimonial-content h4{
+font-size:30px;
+color:#0A3D7A;
+margin-bottom:8px;
+}
+
+.testimonial-content span{
+font-size:20px;
+color:#777;
+}
+
+.prev,
+.next{
+width:70px;
+height:70px;
+border-radius:50%;
+border:none;
+background:white;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+cursor:pointer;
+font-size:22px;
+color:#0A4A8A;
+}
+
+.testimonial-dots{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.dot{
+width:15px;
+height:15px;
+border-radius:50%;
+background:#cbd5e1;
+}
+
+.dot.active{
+background:#0A4A8A;
+}
+
+.testimonial-content {
+    transition: opacity 0.6s ease-in-out;
+    opacity: 1;
+    /* Isso evita que o layout mude de tamanho bruscamente */
+    min-height: 150px; 
+}
+
+/* Ajustes para deixar o depoimento bonito no mobile */
+@media (max-width: 768px) {
+    .testimonial-slider {
+        padding: 0 10px; /* Dá um respiro nas laterais */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .testimonial-card {
+        padding: 30px 20px;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra suave */
+        margin: 0 10px;
+    }
+
+    .testimonial-content p {
+        font-size: 1.1rem; /* Tamanho confortável para leitura */
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+
+    /* Esconde as setas no mobile se achar que ficou poluído, 
+       ou deixa elas flutuando discretas */
+    .prev, .next {
+        background: rgba(0,0,0,0.05);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .testimonial-dots {
+        margin-top: 20px;
+        gap: 8px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        background: #ccc;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+    .dot.active {
+        background: #007bff; /* Coloque a cor principal do seu site aqui */
+        transform: scale(1.2);
+    }
+}
+
+.testimonial-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 50px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.08);
+}
+
+/* --- AJUSTE MOBILE --- */
+@media (max-width: 992px) {
+    .testimonial-card {
+        flex-direction: column; /* Avatar em cima, texto embaixo */
+        text-align: center;
+        padding: 30px;
+    }
+    .testimonial-content p { font-size: 20px !important; } /* Ajuste de fonte */
+}
+
+.testimonial-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: #9aa3af;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.stars {
+    font-size: 30px;
+    color: #FDBA12;
+    margin-bottom: 20px;
+}
+
+.testimonial-content p {
+    font-size: 28px;
+    font-style: italic;
+    line-height: 1.5;
+}

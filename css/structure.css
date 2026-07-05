@@ -1,0 +1,33 @@
+.structure {
+    padding: 60px 0;
+    background: white;
+}
+
+.structure-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* --- AJUSTE MOBILE --- */
+@media (max-width: 768px) {
+    .structure-grid {
+        grid-template-columns: 1fr; /* Empilha as imagens */
+    }
+}
+
+.structure-item {
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.structure-item img {
+    width: 100%;
+    display: block;
+    transition: .6s;
+}
+
+.structure-item:hover img {
+    transform: scale(1.08);
+}
