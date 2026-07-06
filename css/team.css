@@ -1,0 +1,182 @@
+/* ===========================
+   SEÇÃO EQUIPE
+=========================== */
+
+.team {
+    padding: 120px 8%;
+    background: linear-gradient(180deg, #ffffff, #f7f9fc);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap; /* Importante para o botão novo */
+}
+
+.team-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.team-text span {
+    color: #2c9b42;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.team-text h2 {
+    font-size: 48px;
+    color: #143a67;
+    margin: 20px 0;
+}
+
+.team-text p {
+    color: #666;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.team-text ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.team-text li {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.team-text li i {
+    color: #2c9b42;
+    margin-right: 10px;
+}
+
+/* ===========================
+   BOTÃO (NOVA ESTRUTURA)
+=========================== */
+
+.team-btn-wrapper {
+    width: 100%;
+}
+
+.team-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 34px;
+    border-radius: 60px;
+    background: #1e8e3e;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .35s;
+    box-shadow: 0 15px 40px rgba(30,142,62,.25);
+}
+
+.team-btn:hover {
+    transform: translateY(-6px);
+    background: #0d4d84;
+    box-shadow: 0 25px 50px rgba(0,0,0,.25);
+}
+
+/* ===========================
+   SLIDER (CORREÇÃO DE BUG)
+=========================== */
+
+.team-slider-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.team-slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 25px 70px rgba(0,0,0,.15);
+    width: 100%;
+    isolation: isolate; /* CORREÇÃO DO BUG DA LISTRA */
+    transform: translateZ(0);
+}
+
+.slider-track {
+    display: flex;
+    transition: transform .8s cubic-bezier(.22,.61,.36,1);
+}
+
+.slider-track img {
+    width: 100%;
+    flex: 0 0 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center; /* CORREÇÃO DE CORTE */
+    display: block;
+    animation: kenburns 12s ease-in-out infinite alternate;
+}
+
+@keyframes kenburns {
+    from { transform: scale(1); }
+    to { transform: scale(1.06); }
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 58px; height: 58px;
+    border: none; border-radius: 50%;
+    background: rgba(255,255,255,.92);
+    color: #143a67;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.slider-dots span {
+    width: 12px; height: 12px;
+    border-radius: 30px;
+    background: #d4d4d4;
+    cursor: pointer;
+}
+
+.slider-dots span.active {
+    width: 35px;
+    background: #143a67;
+}
+
+/* ===========================
+   EFEITOS E RESPONSIVIDADE
+=========================== */
+
+.reveal-left, .reveal-right {
+    opacity: 0;
+    transition: 1s cubic-bezier(.22,.61,.36,1);
+}
+
+.show { opacity: 1; transform: translate(0) !important; }
+
+@media (max-width: 991px) {
+    .team-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* ORDEM FORÇADA NO CELULAR */
+    .team-text { order: 1; }
+    .team-slider-container { order: 2; margin-bottom: 20px; }
+    .team-btn-wrapper { order: 3; display: flex; justify-content: center; }
+    
+    .slider-track img { height: 300px; }
+}

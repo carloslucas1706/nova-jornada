@@ -1,41 +1,44 @@
+// ==========================
+// INICIALIZAÇÃO DO AOS (Animações)
+// ==========================
 AOS.init({
     duration: 1000,
     once: true,
     offset: 100
 });
 
+// ==========================
+// MENU MOBILE E HEADER ESTILO
+// ==========================
 const menu = document.querySelector(".mobile-menu");
 const toggle = document.querySelector(".menu-toggle");
 const header = document.querySelector("header");
 
-// Abre e fecha menu
-toggle.addEventListener("click",(e)=>{
+// Abre e fecha menu mobile
+toggle.addEventListener("click", (e) => {
     e.stopPropagation();
     menu.classList.toggle("active");
 });
 
-// Fecha ao clicar fora
-document.addEventListener("click",(e)=>{
-    if(
-        menu.classList.contains("active") &&
-        !menu.contains(e.target)
-    ){
+// Fecha o menu ao clicar fora dele
+document.addEventListener("click", (e) => {
+    if (menu.classList.contains("active") && !menu.contains(e.target)) {
         menu.classList.remove("active");
     }
 });
 
-// Fecha ao clicar em qualquer link
-document.querySelectorAll(".mobile-menu a").forEach(link=>{
-    link.addEventListener("click",()=>{
+// Fecha o menu ao clicar em qualquer link interno
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+    link.addEventListener("click", () => {
         menu.classList.remove("active");
     });
 });
 
-// Header reduz quando desce
-window.addEventListener("scroll",()=>{
-    if(window.scrollY>80){
+// Header reduz tamanho quando desce a página
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 80) {
         header.classList.add("scroll");
-    }else{
+    } else {
         header.classList.remove("scroll");
     }
 });
@@ -43,8 +46,8 @@ window.addEventListener("scroll",()=>{
 // ==========================
 // BOTÃO VOLTAR AO TOPO
 // ==========================
-
 const backTop = document.querySelector("#backTop");
+
 window.addEventListener("scroll", () => {
     if (window.scrollY > 500) {
         backTop.classList.add("show");
@@ -53,7 +56,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-if(backTop) {
+if (backTop) {
     backTop.addEventListener("click", () => {
         window.scrollTo({
             top: 0,
@@ -63,18 +66,21 @@ if(backTop) {
 }
 
 // ==========================
-// BARRA DE PROGRESSO
+// BARRA DE PROGRESSO DE LEITURA
 // ==========================
-
 const progress = document.querySelector("#progress-bar");
+
 window.addEventListener("scroll", () => {
     const total = document.documentElement.scrollHeight - window.innerHeight;
     const percent = (window.scrollY / total) * 100;
-    if(progress) {
+    if (progress) {
         progress.style.width = percent + "%";
     }
 });
 
+// ==========================
+// FAQ (Perguntas Frequentes)
+// ==========================
 const faqs = document.querySelectorAll(".faq-item");
 
 faqs.forEach(item => {
@@ -83,9 +89,13 @@ faqs.forEach(item => {
     if (button) {
         button.addEventListener("click", () => {
             const isActive = item.classList.contains("active");
+            
+            // Fecha todos os outros
             faqs.forEach(faq => {
                 faq.classList.remove("active");
             });
+
+            // Abre o que foi clicado (se não estava aberto)
             if (!isActive) {
                 item.classList.add("active");
             }
@@ -93,7 +103,9 @@ faqs.forEach(item => {
     }
 });
 
-
+// ==========================
+// SLIDER DE DEPOIMENTOS
+// ==========================
 document.addEventListener("DOMContentLoaded", function() {
     const testimonialsList = [
         { text: '"Desde o primeiro contato fomos acolhidos com muito respeito. A equipe nos deu forças para recomeçar."', name: "Familiar de paciente", role: "Familiar" },
@@ -108,9 +120,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const textEl = document.getElementById('testimonial-text');
     const nameEl = document.getElementById('testimonial-name');
     const roleEl = document.getElementById('testimonial-role');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
+    const dots = document.querySelectorAll('.testimonial-dots .dot'); // Isolado para depoimentos
+    const prevBtn = document.querySelector('.testimonial-slider .prev'); // Isolado para depoimentos
+    const nextBtn = document.querySelector('.testimonial-slider .next'); // Isolado para depoimentos
     let autoSlideInterval;
 
     if (!contentDiv) return;
@@ -127,9 +139,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 dot.classList.toggle('active', i === index);
             });
 
-            // 3. Aplica a transição de entrada
             contentDiv.style.opacity = '1';
-        }, 600); // 600ms combina com o transition do CSS (0.6s)
+        }, 600);
     }
 
     function nextTestimonial() {
@@ -142,7 +153,6 @@ document.addEventListener("DOMContentLoaded", function() {
         updateTestimonial(currentIndex);
     }
 
-    // Configuração dos botões
     if (nextBtn) nextBtn.addEventListener('click', () => { nextTestimonial(); resetInterval(); });
     if (prevBtn) prevBtn.addEventListener('click', () => { prevTestimonial(); resetInterval(); });
 
@@ -156,8 +166,109 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function resetInterval() {
         clearInterval(autoSlideInterval);
-        autoSlideInterval = setInterval(nextTestimonial, 6000); // 6 segundos é um tempo excelente
+        autoSlideInterval = setInterval(nextTestimonial, 6000);
     }
 
     resetInterval();
 });
+
+// ==========================
+// SLIDER DA EQUIPE
+// ==========================
+const teamContainer = document.querySelector(".team-slider-container");
+
+if (teamContainer) {
+    const track = teamContainer.querySelector(".slider-track");
+    const slides = teamContainer.querySelectorAll(".slider-track img");
+    const dotsContainer = teamContainer.querySelector(".slider-dots");
+    const prevTeamBtn = teamContainer.querySelector(".prev");
+    const nextTeamBtn = teamContainer.querySelector(".next");
+    
+    let teamIndex = 0;
+    let teamInterval;
+
+    // Limpa as bolinhas estáticas do HTML antes de gerar dinamicamente
+    dotsContainer.innerHTML = '';
+
+    // Cria as bolinhas baseadas na quantidade de imagens
+    slides.forEach((_, i) => {
+        const dot = document.createElement("span");
+        if (i === 0) dot.classList.add("active");
+        dotsContainer.appendChild(dot);
+    });
+
+    const teamDots = teamContainer.querySelectorAll(".slider-dots span");
+
+    function updateTeamSlider() {
+        track.style.transform = `translateX(-${teamIndex * 100}%)`;
+        slides.forEach(img => img.classList.remove("active"));
+        teamDots.forEach(dot => dot.classList.remove("active"));
+
+        slides[teamIndex].classList.add("active");
+        teamDots[teamIndex].classList.add("active");
+    }
+
+    function nextTeamSlide() {
+        teamIndex++;
+        if (teamIndex >= slides.length) {
+            teamIndex = 0;
+        }
+        updateTeamSlider();
+    }
+
+    function prevTeamSlide() {
+        teamIndex--;
+        if (teamIndex < 0) {
+            teamIndex = slides.length - 1;
+        }
+        updateTeamSlider();
+    }
+
+    if(nextTeamBtn) nextTeamBtn.onclick = nextTeamSlide;
+    if(prevTeamBtn) prevTeamBtn.onclick = prevTeamSlide;
+
+    teamDots.forEach((dot, i) => {
+        dot.onclick = () => {
+            teamIndex = i;
+            updateTeamSlider();
+        }
+    });
+
+    function autoPlayTeam() {
+        teamInterval = setInterval(nextTeamSlide, 5000);
+    }
+
+    autoPlayTeam();
+
+    // Pausa animação ao passar o mouse
+    teamContainer.addEventListener("mouseenter", () => {
+        clearInterval(teamInterval);
+    });
+
+    teamContainer.addEventListener("mouseleave", () => {
+        autoPlayTeam();
+    });
+
+    updateTeamSlider();
+}
+
+// ==========================
+// ANIMAÇÃO DE REVELAÇÃO NO SCROLL (Classes extras)
+// ==========================
+const reveals = document.querySelectorAll(".reveal-left, .reveal-right, .reveal-up");
+
+function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+
+    reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+
+        // Revela quando o elemento estiver 120px dentro da tela
+        if (top < windowHeight - 120) {
+            el.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll(); // Chama uma vez para verificar elementos já visíveis no topo
