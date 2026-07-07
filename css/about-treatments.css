@@ -1,0 +1,151 @@
+/* ===========================
+   SEÇÃO SOBRE - ESTILOS GERAIS
+=========================== */
+
+.about {
+    padding: 100px 0;
+    background: white;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-header .subtitle {
+    display: block;
+    color: #2c9b42;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.about-header h2 {
+    font-size: 42px;
+    color: #143a67;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* ===========================
+   BOX NOSSO COMPROMISSO
+=========================== */
+
+.about-highlight-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: #f7f9fc;
+    padding: 40px;
+    border-radius: 20px;
+    border-left: 5px solid #2c9b42;
+    margin: 60px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.highlight-icon {
+    font-size: 40px;
+    color: #2c9b42;
+    background: #eaf4ed;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.highlight-text h3 {
+    color: #143a67;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.highlight-text p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* ===========================
+   ÁREA DE TRATAMENTOS (Espaçamento reduzido)
+=========================== */
+
+.about-treatments {
+    background: #f7f9fc;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.about-treatments h3 {
+    font-size: 26px;
+    color: #143a67;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.treatment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.treatment-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.treatment-item i {
+    font-size: 20px;
+    color: #2c9b42;
+    background: #eaf4ed;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.treatment-item span {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* ===========================
+   CONFIGURAÇÕES DE RESPONSIVIDADE
+=========================== */
+
+@media (max-width: 768px) {
+    .about { padding: 60px 5%; }
+    .about-highlight-box { flex-direction: column; text-align: center; }
+    .treatment-grid { grid-template-columns: 1fr; }
+}

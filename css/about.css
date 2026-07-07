@@ -1,225 +1,122 @@
-.about{
-    padding:10px 0;
-    background:white;
-}
-
-.about h2{
-    font-size:48px;
-    color:var(--primary);
-    margin-bottom:25px;
-}
-
-.about p{
-    font-size:20px;
-    color:var(--gray);
-    line-height:1.8;
-    max-width:800px;
-}
-
-.about{
-    padding:120px 0;
-    background:white;
-}
-
-.about-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.about-title span{
-    color:var(--secondary);
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:2px;
-}
-
-.about-title h2{
-    font-size:48px;
-    color:var(--primary);
-    margin-top:15px;
-}
-
-.about-content{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
-
-.about-content p{
-    font-size:20px;
-    line-height:1.9;
-    color:var(--gray);
-    margin-bottom:25px;
-}
+/* ===========================
+   SEÇÃO SOBRE NÓS
+=========================== */
 
 .about {
-    padding: 80px 0; /* Espaçamento ajustado para não ficar exagerado no mobile */
+    padding: 120px 0;
     background: white;
 }
 
-.about-title h2 {
-    font-size: 36px; /* Reduzido para melhor leitura no celular */
-    color: var(--primary);
-    margin-top: 15px;
-}
-
-.about-content p {
-    font-size: 18px; /* Fonte levemente menor para celular */
-    line-height: 1.7;
-    color: var(--gray);
-    margin-bottom: 20px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .about { padding: 50px 0; }
-    .about-title h2 { font-size: 28px; }
-}
-
-/* Estilização da Seção do Release */
-.about-section {
-    padding: 80px 0;
-    background-color: #ffffff; /* Ajuste para bater com o fundo do meu site */
-    color: #333333;
-}
-
-.about-container {
-    max-width: 1140px;
+.about-content {
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .about-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .about-header .subtitle {
     display: block;
-    text-align: center;
-    color: var(--secondary);
+    color: var(--secondary, #2c9b42);
     font-weight: 700;
-    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     margin-bottom: 10px;
 }
 
 .about-header h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.2rem;
-    color: #1a202c;
-    max-width: 800px;
+    font-size: 48px;
+    color: var(--primary, #143a67);
     margin: 0 auto;
-    line-height: 1.4;
-}
-
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    margin-bottom: 50px;
-}
-
-/* Quando a tela for maior (Desktop), divide o texto e o bloco ONA em duas colunas */
-@media (min-width: 768px) {
-    .about-content {
-        grid-template-columns: 1.2fr 0.8fr;
-        align-items: center;
-    }
+    max-width: 800px;
+    line-height: 1.2;
 }
 
 .about-text p {
-    font-family: 'Manrope', sans-serif;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #4a5568;
-    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.9;
+    color: var(--gray, #666);
+    margin-bottom: 25px;
+    text-align: center; 
 }
 
-
-.ona-badge-box {
-    background-color: #f7fafc;
-    border-left: 4px solid #2b6cb0;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.ona-image img {
-    max-width: 140px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.ona-text h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;
-    color: #2d3748;
-    margin-bottom: 10px;
-}
-
-.ona-text p {
-    font-family: 'Manrope', sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #718096;
-}
-
-/* Área de Tratamentos */
-.about-treatments {
-    background: #edf2f7;
-    padding: 40px;
-    border-radius: 12px;
-}
-
-.about-treatments h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    color: #1a202c;
-    margin-bottom: 15px;
-}
-
-.about-treatments p {
-    font-family: 'Manrope', sans-serif;
-    color: #4a5568;
-    line-height: 1.6;
-}
-
-.treatment-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    margin: 25px 0;
-    list-style: none;
-    padding: 0;
-}
-
-@media (min-width: 576px) {
-    .treatment-list {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.treatment-list li {
-    font-family: 'Manrope', sans-serif;
-    font-size: 1rem;
-    color: #2d3748;
+.about-highlight-box {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
+    background: #f7f9fc;
+    padding: 40px;
+    border-radius: 20px;
+    border-left: 5px solid #2c9b42;
+    margin: 80px 0; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
 }
 
-.treatment-list li i {
-    color: #38a169; 
-    font-size: 1.1rem;
+.highlight-icon {
+    font-size: 45px;
+    color: #2c9b42;
+    background: #eaf4ed;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
-.treatment-footer {
-    font-style: italic;
-    font-weight: 600;
-    margin-top: 20px;
-    color: #2d3748 !important;
+.highlight-icon i {
+    animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.2); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.highlight-text h3 {
+    color: #143a67;
+    font-size: 26px;
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+
+.highlight-text p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+    font-size: 17px;
+    text-align: left; 
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 80px 5%;
+    }
+    
+    .about-header h2 {
+        font-size: 36px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+        text-align: left; 
+    }
+
+    .about-highlight-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 15px;
+        margin: 40px 0; 
+    }
+
+    .highlight-text p {
+        text-align: center; 
+    }
 }

@@ -9,10 +9,9 @@
     gap: 30px;
 }
 
-/* --- AJUSTE MOBILE --- */
 @media (max-width: 768px) {
     .services-grid {
-        grid-template-columns: 1fr; /* Coluna única */
+        grid-template-columns: 1fr;
     }
     .service-card h3 { font-size: 22px; }
 }

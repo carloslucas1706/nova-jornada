@@ -1,3 +1,7 @@
+/* ===========================
+   SEÇÃO BENEFÍCIOS
+=========================== */
+
 .benefits{
     padding:10px 0;
     background:#f8fbfd;
@@ -78,7 +82,7 @@
 }
 
 .section-title h2 {
-    font-size: 36px; /* Reduzido para caber bem no celular */
+    font-size: 36px;
     color: var(--primary);
     margin-top: 15px;
 }
@@ -89,10 +93,13 @@
     gap: 30px;
 }
 
-/* --- AJUSTE MOBILE --- */
+/* ===========================
+   CONFIGURAÇÕES DE RESPONSIVIDADE
+=========================== */
+
 @media (max-width: 992px) {
     .benefits-grid {
-        grid-template-columns: 1fr; /* Transforma de 4 colunas para 1 única coluna */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
     .section-title h2 { font-size: 28px; }

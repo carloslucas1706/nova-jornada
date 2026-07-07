@@ -7,6 +7,24 @@ AOS.init({
     offset: 100
 });
 
+/* ==========================================
+   CONTATO E REDES SOCIAIS - CONFIGURAÇÕES
+========================================== */
+
+const CONFIG = {
+
+    clinicName: "Clínica Nova Jornada",
+
+    whatsapp: {
+        number: "5521999999999"
+    },
+
+    instagram: "https://www.instagram.com/clinicanovajornada/",
+
+    facebook: "https://www.facebook.com/profile.php?id=61591470253574"
+
+};
+
 // ==========================
 // MENU MOBILE E HEADER ESTILO
 // ==========================
@@ -272,3 +290,54 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll(); // Chama uma vez para verificar elementos já visíveis no topo
+
+/* ==========================================
+   BOTÕES DO WHATSAPP
+========================================== */
+
+document.querySelectorAll(".whatsapp-link").forEach(button => {
+
+    button.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        const mensagem = encodeURIComponent(
+            this.dataset.message
+        );
+
+        const url =
+        `https://wa.me/${CONFIG.whatsapp.number}?text=${mensagem}`;
+
+        window.open(url,"_blank");
+
+    });
+
+});
+
+// Adicione isso ao seu main.js
+const sliderTrack = document.querySelector('.slider-track');
+const prevBtn = document.querySelector('.slider-btn.prev');
+const nextBtn = document.querySelector('.slider-btn.next');
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+sliderTrack.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+sliderTrack.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const threshold = 50; // Distância mínima para considerar um swipe
+    if (touchEndX < touchStartX - threshold) {
+        // Arrastou para a esquerda (próximo)
+        nextBtn.click();
+    } else if (touchEndX > touchStartX + threshold) {
+        // Arrastou para a direita (anterior)
+        prevBtn.click();
+    }
+}

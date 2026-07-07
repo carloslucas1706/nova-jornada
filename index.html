@@ -30,9 +30,10 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">Sobre</a></li>
+                    <li><a href="#team">Equipe</a></li>
                     <li><a href="#tratamentos">Tratamentos</a></li>
                     <li><a href="#estrutura">Estrutura</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#faq">Dúvidas</a></li>
                 </ul>
                 <div class="menu-toggle">
                     <span></span>
@@ -42,9 +43,10 @@
                 <div class="mobile-menu">
                     <a href="#home">Home</a>
                     <a href="#about">Sobre</a>
+                    <a href="#team">Equipe</a>
                     <a href="#tratamentos">Tratamentos</a>
                     <a href="#estrutura">Estrutura</a>
-                    <a href="#contato">Contato</a>
+                    <a href="#faq">Dúvidas</a>
                     <a href="#" class="mobile-btn">Fale no WhatsApp</a>
                 </div>
             </nav>
@@ -59,8 +61,20 @@
                     <h1>Um novo caminho começa com um primeiro passo.</h1>
                     <p>Sabemos que pedir ajuda não é fácil. Nossa equipe está preparada para acolher você e sua família com respeito, cuidado e profissionalismo em cada etapa da recuperação.</p>
                     <div class="hero-buttons">
-                        <a href="#" class="btn-primary">Falar no WhatsApp</a>
-                        <a href="#" class="btn-secondary">Agendar Avaliação</a>
+<a href="#"
+   class="btn-primary whatsapp-link"
+   data-message="Olá! Visitei o site da Clínica Nova Jornada e gostaria de receber mais informações.">
+
+    Falar no WhatsApp
+
+</a>
+<a href="#"
+   class="btn-secondary whatsapp-link"
+   data-message="Olá! Gostaria de agendar uma avaliação na Clínica Nova Jornada.">
+
+    Agendar Avaliação
+
+</a>
                     </div>
                 </div>
                 <div class="hero-image" data-aos="fade-left">
@@ -69,8 +83,10 @@
             </div>
         </section>
 
-        <section id="about" class="about-section" data-aos="fade-up">
+        <!-- SEÇÃO SOBRE ATUALIZADA -->
+        <section id="about" class="about" data-aos="fade-up">
             <div class="container about-container">
+                
                 <div class="about-header">
                     <span class="subtitle">Nossa Clínica</span>
                     <h2>Clínica Nova Jornada consolida novo conceito de excelência, segurança e humanização em saúde mental</h2>
@@ -82,13 +98,13 @@
                         <p>Fundada em 2026, a instituição propõe um novo conceito de cuidado em saúde mental, convergindo excelência técnica e sensibilidade humana em todas as suas diretrizes. Nosso modelo de tratamento é integral, englobando de forma sistêmica os aspectos físicos, psíquicos, sociais e integrativos do indivíduo. Toda a assistência é realizada em um ambiente acolhedor, planejado estrategicamente para proporcionar o máximo de conforto, segurança e bem-estar. A evolução terapêutica é monitorada de perto por uma equipe multidisciplinar, garantindo que o paciente e seus familiares sejam plenamente informados e envolvidos em cada etapa do processo, sob o pilar da transparência e do acolhimento.</p>
                     </div>
 
-                    <div class="ona-badge-box">
-                        <div class="ona-image">
-                            <img src="images/icons/selo.png" alt="Selo de Acreditação ONA Nível 2 - Clínica Nova Jornada">
+                    <div class="about-highlight-box">
+                        <div class="highlight-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
                         </div>
-                        <div class="ona-text">
-                            <h3>Acreditado Pleno — ONA Nível 2</h3>
-                            <p>Reconhecida pelo rigor técnico e pelo compromisso intransigente com a segurança do paciente, a instituição é detentora do selo concedido pela Organização Nacional de Acreditação. Esta prestigiada certificação nacional chancelando a excelência da Clínica Nova Jornada.</p>
+                        <div class="highlight-text">
+                            <h3>Nosso Compromisso</h3>
+                            <p>Mais do que tratamento, oferecemos um acolhimento ético e integral. Nossa prioridade é a dignidade do paciente, com planos terapêuticos personalizados que respeitam a individualidade e buscam a reintegração plena, sempre com segurança, empatia e suporte contínuo para toda a família.</p>
                         </div>
                     </div>
                 </div>
@@ -96,23 +112,43 @@
                 <div class="about-treatments">
                     <h3>Abordagem Terapêutica</h3>
                     <p>A Clínica Nova Jornada adota uma linha de tratamento personalizada e multidisciplinar, utilizando protocolos de alta eficácia clínica. Entre as frentes terapêuticas oferecidas, destacam-se:</p>
-                    <ul class="treatment-list">
-                        <li><i class="fas fa-check-circle"></i> Acompanhamento médico-psiquiátrico contínuo</li>
-                        <li><i class="fas fa-check-circle"></i> Terapia cognitivo-comportamental (TCC)</li>
-                        <li><i class="fas fa-check-circle"></i> Terapia familiar e Entrevista motivacional</li>
-                        <li><i class="fas fa-check-circle"></i> Oficinas ocupacionais e Práticas integrativas</li>
-                        <li><i class="fas fa-check-circle"></i> Meditação e Educação física orientada</li>
-                    </ul>
-                    <p class="treatment-footer">Todas as abordagens são conduzidas de forma extremamente humanizada, segura e conscienciosa.</p>
+                    
+                    <!-- Novo Grid de Tratamentos com seus textos -->
+                    <div class="treatment-grid">
+                        <div class="treatment-item">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <span>Acompanhamento médico-psiquiátrico</span>
+                        </div>
+                        <div class="treatment-item">
+                            <i class="fa-solid fa-brain"></i>
+                            <span>Terapia cognitivo-comportamental (TCC)</span>
+                        </div>
+                        <div class="treatment-item">
+                            <i class="fa-solid fa-people-roof"></i>
+                            <span>Terapia familiar e motivacional</span>
+                        </div>
+                        <div class="treatment-item">
+                            <i class="fa-solid fa-hands-holding-circle"></i>
+                            <span>Oficinas e Práticas integrativas</span>
+                        </div>
+                        <div class="treatment-item">
+                            <i class="fa-solid fa-spa"></i>
+                            <span>Meditação e Educação física</span>
+                        </div>
+                    </div>
+
+                    <p style="text-align: center; margin-top: 40px; font-weight: 500;">Todas as abordagens são conduzidas de forma extremamente humanizada, segura e conscienciosa.</p>
                 </div>
             </div>
         </section>
+        <!-- FIM SEÇÃO SOBRE ATUALIZADA -->
 
-<section class="team">
+<section class="team" id="team">
     <div class="container">
         <div class="team-content">
             
-            <div class="team-text reveal-left">
+            <!-- Efeito de animação restaurado com data-aos -->
+            <div class="team-text" data-aos="fade-right" data-aos-duration="1000">
                 <span>NOSSA EQUIPE</span>
                 <h2>Cuidar de pessoas é a nossa missão.</h2>
                 <p>
@@ -121,15 +157,29 @@
                     cuidado humanizado e acompanhamento completo durante todo o
                     processo de recuperação.
                 </p>
-                <ul>
-                    <li><i class="fa-solid fa-check"></i> Atendimento Humanizado</li>
-                    <li><i class="fa-solid fa-check"></i> Equipe Multidisciplinar</li>
-                    <li><i class="fa-solid fa-check"></i> Apoio às Famílias</li>
-                    <li><i class="fa-solid fa-check"></i> Estrutura Completa</li>
+                
+                <!-- Nova lista com ícones personalizados -->
+                <ul class="team-benefits-list">
+                    <li>
+                        <div class="team-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                        <span>Atendimento Humanizado</span>
+                    </li>
+                    <li>
+                        <div class="team-icon"><i class="fa-solid fa-user-group"></i></div>
+                        <span>Equipe Multidisciplinar</span>
+                    </li>
+                    <li>
+                        <div class="team-icon"><i class="fa-solid fa-house-chimney-medical"></i></div>
+                        <span>Apoio às Famílias</span>
+                    </li>
+                    <li>
+                        <div class="team-icon"><i class="fa-solid fa-bed-pulse"></i></div>
+                        <span>Estrutura Completa</span>
+                    </li>
                 </ul>
             </div>
             
-            <div class="team-slider-container reveal-right">
+            <div class="team-slider-container" data-aos="fade-left" data-aos-duration="1000">
                 <div class="team-slider">
                     <button class="slider-btn prev" aria-label="Membro anterior">
                         <i class="fa-solid fa-chevron-left"></i>
@@ -150,11 +200,15 @@
             </div>
 
             <div class="team-btn-wrapper">
-                <a href="#contato" class="team-btn">
-                    <i class="fa-solid fa-arrow-right"></i>
-                    Agendar uma Visita
-                </a>
-            </div>
+<a href="#"
+   class="team-btn whatsapp-link"
+   data-message="Olá! Gostaria de agendar uma visita à Clínica Nova Jornada.">
+
+    <i class="fa-solid fa-arrow-right"></i>
+
+    Agendar uma Visita
+
+</a>            </div>
 
         </div>
     </div>
@@ -409,8 +463,13 @@
                                 </div>
                             </div>
                         </div>
+<a href="#"
+   class="faq-btn whatsapp-link"
+   data-message="Olá! Gostaria de tirar algumas dúvidas sobre o tratamento.">
 
-                        <a href="#contato" class="faq-btn">Ainda com dúvidas? Fale conosco</a>
+Ainda com dúvidas? Fale conosco
+
+</a>
                     </div>
 
                     <div class="faq-image-wrapper">
@@ -421,13 +480,109 @@
             </div>
         </section>
 
+<section class="location" id="localizacao">
+
+    <div class="container">
+
+        <div class="location-header">
+
+            <span>LOCALIZAÇÃO</span>
+
+            <h2>Onde Estamos</h2>
+
+            <p>
+                Estamos preparados para receber você e sua família
+                com acolhimento, segurança e atendimento humanizado.
+            </p>
+
+        </div>
+
+        <div class="location-content">
+
+            <div class="location-info">
+
+                <div class="location-card">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+                        <h3>Endereço</h3>
+                        <p>
+                            Rua Exemplo, 123<br>
+                            Rio de Janeiro - RJ
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="location-card">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <div>
+                        <h3>Telefone</h3>
+                        <p>(21) 99999-9999</p>
+                    </div>
+
+                </div>
+
+                <div class="location-card">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <div>
+                        <h3>Atendimento</h3>
+                        <p>24 horas por dia</p>
+                    </div>
+
+                </div>
+                <div class="location-buttons">
+
+    <a href="https://maps.google.com/?q=ENDERECO_DA_CLINICA"
+       class="location-btn"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        Como Chegar
+
+    </a>
+
+</div>
+
+            </div>
+
+            <div class="location-map">
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58772.686694457734!2d-43.52370563393153!3d-22.976253752513056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bdd7fb7fd02e9%3A0x8d206948f1f0b551!2sVargem%20Grande%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1783400992513!5m2!1spt-BR!2sbr"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
         <section class="cta" id="contato">
             <div class="container">
                 <h2>O primeiro passo pode mudar uma vida inteira.</h2>
                 <p>Nossa equipe está preparada para acolher você e sua família com respeito, sigilo e atendimento humanizado.</p>
-                <a href="#" class="cta-button">
-                    <i class="fa-brands fa-whatsapp"></i> Falar com nossa equipe
-                </a>
+<a href="#"
+   class="cta-button whatsapp-link"
+   data-message="Olá! Visitei o site da Clínica Nova Jornada e gostaria de falar com a equipe.">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    Falar com nossa equipe
+
+</a>
             </div>
         </section>
     </main>
@@ -451,9 +606,25 @@
             <div class="footer-social">
                 <h3>Redes Sociais</h3>
                 <div class="social-icons">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/clinicanovajornada/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                    </a>
+<a href="https://www.facebook.com/profile.php?id=61591470253574"
+   target="_blank"
+   rel="noopener noreferrer">
+
+    <i class="fa-brands fa-facebook-f"></i>
+
+</a>
+<a href="https://wa.me/5521999999999?text=Olá!%20Visitei%20o%20site%20da%20Clínica%20Nova%20Jornada%20e%20gostaria%20de%20receber%20mais%20informações%20sobre%20os%20tratamentos."
+   target="_blank"
+   rel="noopener noreferrer">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
                 </div>
             </div>
 
@@ -464,9 +635,13 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/5500000000000" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+<a href="#"
+   class="whatsapp-float whatsapp-link"
+   data-message="Olá! Visitei o site da Clínica Nova Jornada e gostaria de receber mais informações.">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+</a>
     
     <button id="backTop" aria-label="Voltar ao topo">
         <i class="fa-solid fa-chevron-up"></i>

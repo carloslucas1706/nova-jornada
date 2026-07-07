@@ -1,3 +1,7 @@
+/* ===========================
+   BOTÃO VOLTAR AO TOPO
+=========================== */
+
 #backTop{
     position:fixed;
     left:30px;
@@ -22,9 +26,9 @@
 
 #backTop {
     position: fixed;
-    left: 20px; /* Um pouco mais próximo da borda */
+    left: 20px;
     bottom: 20px;
-    width: 50px; /* Tamanho levemente reduzido */
+    width: 50px;
     height: 50px;
     border: none;
     border-radius: 50%;
@@ -35,7 +39,7 @@
     opacity: 0;
     visibility: hidden;
     transition: .4s;
-    z-index: 999; /* Garante que fique acima de tudo */
+    z-index: 999;
 }
 
 #backTop.show {

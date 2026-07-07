@@ -3,7 +3,7 @@
 =========================== */
 
 .team {
-    padding: 120px 8%;
+    padding: 40px 8% 120px 8%; 
     background: linear-gradient(180deg, #ffffff, #f7f9fc);
     position: relative;
     overflow: hidden;
@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 60px;
-    flex-wrap: wrap; /* Importante para o botão novo */
+    flex-wrap: wrap;
 }
 
 .team-text {
@@ -98,7 +98,7 @@
     border-radius: 30px;
     box-shadow: 0 25px 70px rgba(0,0,0,.15);
     width: 100%;
-    isolation: isolate; /* CORREÇÃO DO BUG DA LISTRA */
+    isolation: isolate;
     transform: translateZ(0);
 }
 
@@ -122,16 +122,34 @@
     to { transform: scale(1.06); }
 }
 
+/* Ajuste na classe existente em team.css */
 .slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 58px; height: 58px;
-    border: none; border-radius: 50%;
-    background: rgba(255,255,255,.92);
+    width: 50px; 
+    height: 50px;
+    border: none; 
+    border-radius: 50%;
+    /* Fundo branco com transparência */
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(4px); /* Efeito vidro */
     color: #143a67;
     cursor: pointer;
     z-index: 10;
+    transition: all 0.3s ease;
+    opacity: 0; /* Invisível por padrão */
+}
+
+/* Faz as setas aparecerem quando passar o mouse no slider */
+.team-slider:hover .slider-btn {
+    opacity: 1;
+}
+
+/* Efeito visual melhorado */
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .prev { left: 20px; }
@@ -179,4 +197,47 @@
     .team-btn-wrapper { order: 3; display: flex; justify-content: center; }
     
     .slider-track img { height: 300px; }
+    .slider-btn {
+        display: none; /* Esconde as setas no celular */
+    }
+}
+/* ===========================
+   LISTA DE BENEFÍCIOS DA EQUIPE
+=========================== */
+.team-benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.team-benefits-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    color: #444;
+    font-weight: 500;
+}
+
+.team-icon {
+    width: 45px;
+    height: 45px;
+    background: #eaf4ed;
+    color: #2c9b42;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(44, 155, 66, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Leve efeito ao passar o mouse */
+.team-benefits-list li:hover .team-icon {
+    transform: scale(1.1);
 }
